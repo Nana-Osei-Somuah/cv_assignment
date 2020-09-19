@@ -8,15 +8,15 @@
 
 #boldy1{
     font-weight: bold;
-    font-size: 14pt;
+    font-size: 19pt;
 }
 
 #bod1{
-    font-size: 8.5pt;
+    font-size: 13.5pt;
 }
 
 h1{
-    font-size: 8.5pt;
+    font-size: 13.5pt;
 }
 
 #bod{
@@ -67,3 +67,6 @@ a{
   color:white;
 }
 
+#right{
+    text-align: right;
+}
