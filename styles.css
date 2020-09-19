@@ -10,21 +10,50 @@ h1{
     font-size: 8.5pt;
 }
 
-.myform{
-    margin: 2rem auto;
-    border: 2pm solid blueviolet;
-    padding: 2rem;
+#bod{
+  background: burlywood;
+}
+
+form{
+  margin: 20px auto;
+  width: 320px;
+  color: brown;
+}
+
+input{
+  padding: 5px;
+  display:block;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 2px solid brown
+}
+
+input:focus{
+  background:khaki;
 }
 
 #subut{
-    border: 0;
-    background: brown;
-    padding: 5rem;
-    margin: 1rem;
-    cursor: pointer;
+  width:100px;
+  height:30px;
+  background: brown;
+  color: white;
+  cursor:pointer;
 }
 
-label{
-    display: block;
-    padding: 5rem;
+#gender{
+  padding: 5px;
+  display:block;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 2px solid brown;
+}
+
+#hd{
+  background: brown;
+  text-align:center;
+  font-size:25px;
+}
+
+a{
+  color:white;
 }
