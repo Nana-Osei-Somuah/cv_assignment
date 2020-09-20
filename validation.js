@@ -3,11 +3,8 @@ const fname = document.getElementById("fname");
 const lname = document.getElementById("lname");
 const phone = document.getElementById("phone");
 const email = document.getElementById("email");
-const address = document.getElementById("address");
 
 function fnamevalid(){
-    if(noInput(fname)) return;
-
     if(!alphaOnly(fname)){
         return true;
     }
@@ -17,8 +14,6 @@ function fnamevalid(){
 }
 
 function lnamevalid(){
-    if(noInput(lname)) return;
-
     if(!alphaOnly(lname)){
         return true;
     }
@@ -26,6 +21,26 @@ function lnamevalid(){
         return false;
     }
 }
+
+function phonevalid(){
+    if(!phoneOnly(phone)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+function emailvalid(){
+    if(!emailOnly(email)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+
 
 function noInput(input){
     if(empty(input.value)){
@@ -60,12 +75,34 @@ function goodInput(input){
 }
 
 function alphaOnly(input){
-    if(/^[a-zA-Z] + $/.test(input.value)){
+    if(/^[a-zA-Z ]+$/.test(input.value)){
          goodInput(input);
          return true;
     }
     else{
         errorNote(input,"Only alphabets allowed here!");
+        return false;
+    }
+}
+
+function emailOnly(input){
+    if(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(input.value)){
+        goodInput(input);
+        return true;
+    }
+    else{
+        errorNote(input,"Please use the correct email format!");
+        return false;
+    }
+}
+
+function phoneOnly(input){
+    if(/^[0-9 ]+$/.test(input.value)){
+         goodInput(input);
+         return true;
+    }
+    else{
+        errorNote(input,"Only numbers allowed here!");
         return false;
     }
 }

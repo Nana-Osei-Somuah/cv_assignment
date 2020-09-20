@@ -41,16 +41,17 @@
         </div>
         <div class = "thisForm">
             <label for="phone">Phone Number: </label>
-            <input id="phone" name="Phone Number" type="tel" onblurout="phonevalid()">
+            <input id="phone" name="Phone Number" type="tel" onfocusout="phonevalid()">
             <span class="note"></span>
         </div>
         <div class = "thisForm">
             <label for="email">Email: </label>
-            <input id="email" name="Email" type="email" onblurout="emailvalid()">
+            <input id="email" name="Email" type="email" onfocusout="emailvalid()">
+            <span class="note"></span>
         </div>
         <div class = "thisForm">
             <label for="address">Address: </label>
-            <input id="address" name="Address" type="text" onblurout="addressvalid()">
+            <input id="address" name="Address" type="text">
             <span class="note"></span>
         </div>
         <button type="submit" id="subut">submit</button>
