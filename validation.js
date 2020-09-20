@@ -4,6 +4,16 @@ const lname = document.getElementById("lname");
 const phone = document.getElementById("phone");
 const email = document.getElementById("email");
 
+
+function errorChecker(){
+    if(fnamevalid() && lnamevalid() && phonevalid() && emailvalid()){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 function fnamevalid(){
     if(!alphaOnly(fname)){
         return true;
@@ -106,3 +116,38 @@ function phoneOnly(input){
         return false;
     }
 }
+
+function dataTrans(){
+   const fname1 = document.getElementById("fname").value;
+   const mname1 = document.getElementById("mname").value;
+   const lname1 = document.getElementById("lname").value;
+   const address1 = document.getElementById("address").value;
+   const phone1 = document.getElementById("phone").value;
+   const email1 = document.getElementById("email").value;
+
+   localStorage.setItem("FNAME",fname1);
+   localStorage.setItem("MNAME",mname1);
+   localStorage.setItem("LNAME",lname1);
+   localStorage.setItem("ADDRESS",address1);
+   localStorage.setItem("PHONE",phone1);
+   localStorage.setItem("EMAIL",email1);
+
+   return;
+}
+
+window.addEventListener("load", () =>{
+    const fname1 = localStorage.getItem("FNAME");
+    const mname1 = localStorage.getItem("MNAME");
+    const lname1 = localStorage.getItem("LNAME");
+    const comb = fname1.concat(" ",mname1," ",lname1);
+    const address1 = localStorage.getItem("ADDRESS");
+    const phone1 = localStorage.getItem("PHONE");
+    const email1 = localStorage.getItem("EMAIL");
+
+    document.getElementById("rname").innerHTML = comb;
+
+    document.getElementById("raddress").innerHTML = address1;
+    document.getElementById("rphone").innerHTML = phone1;
+    document.getElementById("remail").innerHTML = email1;
+
+})

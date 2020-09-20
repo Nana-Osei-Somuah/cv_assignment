@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASHESI CV FORM</title>
-    <script src="validation.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body id="bod">
@@ -17,10 +16,10 @@
         </nav>
     </div>
 
-    <form class="myform" id="myform">
+    <form class="myform" id="myform" action="cv.html" method="GET" onsubmit="return errorChecker()">
         <div class = "thisForm">
             <label for="first name">First Name: </label>
-            <input id="fname" name="First Name" type="text" onfocusout="fnamevalid()">
+            <input id="fname" name="First Name" type="text">
             <span class="note"></span>
         </div>
         <div>
@@ -29,7 +28,7 @@
         </div class = "thisForm">
         <div>
             <label for="last name">Last Name: </label>
-            <input id="lname" name="Last Name" type="text" onfocusout="lnamevalid()">
+            <input id="lname" name="Last Name" type="text">
             <span class="note"></span>
         </div>
         <div>
@@ -41,12 +40,12 @@
         </div>
         <div class = "thisForm">
             <label for="phone">Phone Number: </label>
-            <input id="phone" name="Phone Number" type="tel" onfocusout="phonevalid()">
+            <input id="phone" name="Phone Number" type="tel">
             <span class="note"></span>
         </div>
         <div class = "thisForm">
             <label for="email">Email: </label>
-            <input id="email" name="Email" type="email" onfocusout="emailvalid()">
+            <input id="email" name="Email" type="email">
             <span class="note"></span>
         </div>
         <div class = "thisForm">
@@ -54,7 +53,8 @@
             <input id="address" name="Address" type="text">
             <span class="note"></span>
         </div>
-        <button type="submit" id="subut">submit</button>
+        <button type="submit" id="subut" onclick="dataTrans()">SUBMIT</button>
     </form>
 </body>
+<script type="text/javascript" src="validation.js"></script>
 </html>
