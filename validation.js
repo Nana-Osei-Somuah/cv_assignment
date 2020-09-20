@@ -59,7 +59,7 @@ function goodInput(input){
     input.nextElementSibling.color = green;
 }
 
-alphaOnly(input){
+function alphaOnly(input){
     if(/^[a-zA-Z] + $/.test(input.value)){
          goodInput(input);
          return true;
