@@ -5,14 +5,14 @@ const phone = document.getElementById("phone");
 const email = document.getElementById("email");
 
 
-function errorChecker(){
-    if(fnamevalid() && lnamevalid() && phonevalid() && emailvalid()){
-        return true;
-    }
-    else{
-        return false;
-    }
-}
+// function errorChecker(){
+//     if(fnamevalid() && lnamevalid() && phonevalid() && emailvalid()){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// }
 
 function fnamevalid(){
     if(!alphaOnly(fname)){
